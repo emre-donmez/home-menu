@@ -26,7 +26,7 @@ function CoffeeCup({ fillLevel, color, clipId }) {
         fill={color}
         initial={{ y: 56 }}
         animate={{ y: 56 - fillLevel * 42 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        transition={{ duration: FILL_ANIMATION_DURATION, ease: "easeOut" }}
       />
       {/* Handle */}
       <path
@@ -104,6 +104,9 @@ const colorMap = {
   "mineral-water": "#87CEEB",
 };
 
+const FILL_ANIMATION_DURATION = 1.2;
+const MODAL_OPEN_DELAY = FILL_ANIMATION_DURATION * 750;
+
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i) => ({
@@ -124,7 +127,7 @@ export default function DrinkCard({ drink, index, onClick }) {
     setIsFilling(true);
     setTimeout(() => {
       onClick(drink);
-    }, 900);
+    }, MODAL_OPEN_DELAY);
   };
 
   return (
