@@ -13,8 +13,8 @@ export default function MenuPage() {
   const filtered = drinks.filter((d) => d.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950">
-      <div className="max-w-3xl mx-auto pb-12">
+    <div className="min-h-screen bg-gradient-to-b from-amber-900 via-amber-800 to-orange-900">
+      <div className="max-w-lg mx-auto pb-12">
         <WelcomeHeader />
         <CategoryTabs active={activeCategory} onChange={setActiveCategory} />
         <DrinkGrid drinks={filtered} onSelect={setSelectedDrink} />

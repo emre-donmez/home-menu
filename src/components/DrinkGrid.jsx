@@ -10,7 +10,7 @@ export default function DrinkGrid({ drinks, onSelect }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.25 }}
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 pb-8"
+        className="grid grid-cols-2 gap-3 px-4 pb-24"
       >
         {drinks.map((drink, i) => (
           <DrinkCard

@@ -1,0 +1,505 @@
+export const translations = {
+  tr: {
+    welcome: "Ev Barına Hoş Geldin ☕",
+    subtitle: "Menüden bir içecek seç, tarifini keşfet.",
+    ingredients: "Malzemeler",
+    ratios: "Oranlar",
+    steps: "Hazırlanışı",
+    serving: "Servis",
+    close: "Kapat",
+    langSwitch: "EN",
+    categories: {
+      espresso: "Espresso Bazlı",
+      cold: "Soğuk İçecekler",
+      traditional: "Geleneksel",
+      other: "Diğer",
+    },
+    drinks: {
+      espresso: {
+        name: "Espresso",
+        description: "Saf ve yoğun tek shot kahve.",
+        ingredients: ["1 shot espresso (7g kahve)"],
+        steps: [
+          "7g kahve çekirdeğini ince öğütün",
+          "Eşit şekilde tamperlayın",
+          "25–30 saniye boyunca çekin",
+          "Önceden ısıtılmış espresso fincanında servis edin",
+        ],
+        serving: "Sıcak espresso fincanında hemen servis edin.",
+      },
+      americano: {
+        name: "Americano",
+        description: "Sıcak su ile seyreltilmiş espresso. Yumuşak ve hafif.",
+        ingredients: ["1 shot espresso", "120–150 ml sıcak su"],
+        steps: [
+          "Bir shot espresso çekin",
+          "Suyu 90–95°C'ye ısıtın",
+          "Sıcak suyu fincana dökün",
+          "Espressoyu üzerine ekleyin",
+        ],
+        serving:
+          "Büyük bir fincanda servis edin. Sade veya bir damla sütle içilebilir.",
+      },
+      latte: {
+        name: "Latte",
+        description: "Buharda ısıtılmış süt ve ince köpük ile espresso.",
+        ingredients: ["1 shot espresso", "150–180 ml süt", "İnce süt köpüğü"],
+        steps: [
+          "Espresso çekin",
+          "Sütü 60–65°C'ye buharla ısıtın",
+          "Buharlı sütü espressonun üzerine dökün",
+          "Üzerine ince bir köpük katmanı ekleyin",
+        ],
+        serving: "Uzun bir bardak veya büyük fincanda servis edin.",
+      },
+      cappuccino: {
+        name: "Cappuccino",
+        description: "Eşit oranda espresso, buharlı süt ve kalın köpük.",
+        ingredients: [
+          "1 shot espresso",
+          "60 ml buharlı süt",
+          "60 ml süt köpüğü",
+        ],
+        steps: [
+          "Espresso çekin",
+          "Kalın, kadifemsi köpük oluşturun",
+          "Buharlı sütü espressonun üzerine dökün",
+          "Kalın köpüğü üzerine kaşıklayın",
+        ],
+        serving:
+          "Geniş bir fincanda servis edin. İsteğe bağlı kakao serpebilirsiniz.",
+      },
+      "flat-white": {
+        name: "Flat White",
+        description: "Çift shot espresso ile kadifemsi mikro köpüklü süt.",
+        ingredients: [
+          "2 shot espresso",
+          "130–150 ml buharlı süt",
+          "Mikro köpük",
+        ],
+        steps: [
+          "Çift shot espresso çekin",
+          "Sütü 60°C'de çok ince mikro köpükle ısıtın",
+          "Sütü minimal köpükle espressonun üzerine dökün",
+        ],
+        serving: "Küçük bir fincanda servis edin. Latteden daha güçlü.",
+      },
+      mocha: {
+        name: "Mocha",
+        description: "Çikolata ve buharlı süt ile espresso. Tatlı bir keyif.",
+        ingredients: [
+          "1 shot espresso",
+          "1 yemek kaşığı çikolata sosu",
+          "150 ml buharlı süt",
+          "Krem şanti (isteğe bağlı)",
+        ],
+        steps: [
+          "Fincana çikolata sosunu ekleyin",
+          "Espresso çekin ve çikolatanın üzerine dökün",
+          "Karıştırın",
+          "Buharlı sütü ekleyin",
+          "İsterseniz krem şanti ile tamamlayın",
+        ],
+        serving: "Uzun bir bardakta servis edin. Çikolata sevenler için ideal.",
+      },
+      macchiato: {
+        name: "Macchiato",
+        description: "Az miktarda süt köpüğü ile 'lekelenmiş' espresso.",
+        ingredients: ["1 shot espresso", "1–2 yemek kaşığı süt köpüğü"],
+        steps: [
+          "Espresso çekin",
+          "Az miktarda sütü buharla ısıtın",
+          "Espressonun üzerine bir kaşık köpük ekleyin",
+        ],
+        serving: "Espresso fincanında servis edin. Güçlü ve yoğun.",
+      },
+      cortado: {
+        name: "Cortado",
+        description: "Eşit miktarda ılık süt ile dengelenmiş espresso.",
+        ingredients: ["1 shot espresso", "30–60 ml ılık süt"],
+        steps: [
+          "Espresso çekin",
+          "Sütü hafifçe ısıtın (latteden daha az köpük)",
+          "Eşit miktarda sütü espressonun üzerine dökün",
+        ],
+        serving: "Küçük bir bardakta servis edin. Yumuşak ve dengeli.",
+      },
+      "iced-latte": {
+        name: "Buzlu Latte",
+        description: "Buz üzerinde soğuk süt ile espresso.",
+        ingredients: ["1–2 shot espresso", "150 ml soğuk süt", "Buz küpleri"],
+        steps: [
+          "Espresso çekin ve biraz soğumasını bekleyin",
+          "Bardağı buz küpleriyle doldurun",
+          "Soğuk sütü buzun üzerine dökün",
+          "Espressoyu üzerine ekleyin",
+        ],
+        serving:
+          "Uzun bir bardakta pipet ile servis edin. İsterseniz şurup ekleyebilirsiniz.",
+      },
+      "iced-americano": {
+        name: "Buzlu Americano",
+        description: "Buz ve soğuk su üzerine espresso. Ferahlatıcı.",
+        ingredients: ["1–2 shot espresso", "150 ml soğuk su", "Buz küpleri"],
+        steps: [
+          "Bardağı buz küpleriyle doldurun",
+          "Soğuk suyu buzun üzerine dökün",
+          "Espresso çekin",
+          "Espressoyu buzlu suyun üzerine dökün",
+        ],
+        serving: "Uzun bir bardakta servis edin. Hafif ve ferahlatıcı.",
+      },
+      "iced-mocha": {
+        name: "Buzlu Mocha",
+        description: "Buz üzerinde çikolata ve süt ile soğuk espresso.",
+        ingredients: [
+          "1 shot espresso",
+          "1 yemek kaşığı çikolata sosu",
+          "150 ml soğuk süt",
+          "Buz küpleri",
+          "Krem şanti (isteğe bağlı)",
+        ],
+        steps: [
+          "Çikolata sosunu az miktar sıcak espresso ile karıştırın",
+          "Bardağı buzla doldurun",
+          "Soğuk sütü buzun üzerine dökün",
+          "Çikolatalı espresso karışımını ekleyin",
+          "İsterseniz krem şanti ile tamamlayın",
+        ],
+        serving: "Uzun bir bardakta servis edin. Tatlı ve soğuk bir keyif.",
+      },
+      "cold-brew": {
+        name: "Cold Brew",
+        description: "Yavaş demleme ile pürüzsüz, düşük asitli kahve.",
+        ingredients: ["30g kalın öğütülmüş kahve", "500 ml soğuk su"],
+        steps: [
+          "Kahve çekirdeklerini kalın öğütün",
+          "Kahve ve soğuk suyu bir kavanozda birleştirin",
+          "Nazikçe karıştırın",
+          "12–24 saat buzdolabında bekletin",
+          "Filtreden süzün",
+          "Buz üzerinde servis edin, isterseniz seyreltin",
+        ],
+        serving: "Buz üzerinde servis edin. Su veya sütle seyreltilebilir.",
+      },
+      "turkish-coffee": {
+        name: "Türk Kahvesi",
+        description:
+          "Cezvede pişirilen zengin, filtresiz kahve. Zamansız bir klasik.",
+        ingredients: [
+          "2 tatlı kaşığı ince çekilmiş Türk kahvesi",
+          "1 fincan soğuk su",
+          "Şeker (isteğe bağlı)",
+        ],
+        steps: [
+          "Cezveye soğuk suyu ekleyin",
+          "Kahveyi (ve isterseniz şekeri) ekleyin",
+          "Karıştırın ve kısık ateşe koyun",
+          "Karıştırmadan yavaşça ısıtın",
+          "Köpük yükselince ateşten alın",
+          "Köpüğü koruyarak fincana dökün",
+        ],
+        serving: "Bir bardak su ve lokum ile servis edin.",
+      },
+      tea: {
+        name: "Çay",
+        description: "Geleneksel yöntemle demlenen klasik siyah çay.",
+        ingredients: ["2 tatlı kaşığı yaprak çay", "Kaynar su"],
+        steps: [
+          "Taze su kaynatın",
+          "Çaydanlığı ısıtın",
+          "Çay yapraklarını demliğe ekleyin",
+          "Kaynar suyu yaprakların üzerine dökün",
+          "3–5 dakika demleyin",
+          "Süzgeçten geçirerek servis edin",
+        ],
+        serving: "Çay bardağında servis edin. İsteğe göre şeker ekleyin.",
+      },
+      "linden-tea": {
+        name: "Ihlamur",
+        description: "Rahatlatıcı ve aromatik bitki çayı. Rahatlama için ideal.",
+        ingredients: [
+          "1–2 tatlı kaşığı kurutulmuş ıhlamur çiçeği",
+          "Kaynar su",
+          "Bal (isteğe bağlı)",
+        ],
+        steps: [
+          "Taze su kaynatın",
+          "Ihlamur çiçeklerini fincan veya demliğe koyun",
+          "Kaynar suyu çiçeklerin üzerine dökün",
+          "Kapatın ve 5–7 dakika demleyin",
+          "Süzün ve isterseniz bal ekleyin",
+        ],
+        serving: "Sıcak servis edin. Bir kaşık bal ile harika.",
+      },
+      "mineral-water": {
+        name: "Maden Suyu",
+        description: "Ferahlatıcı gazlı veya gazsız maden suyu.",
+        ingredients: ["Maden suyu"],
+        steps: [
+          "Bardağa dökün",
+          "İsterseniz buz ekleyin",
+          "Bir dilim limon ile servis edin",
+        ],
+        serving: "Soğuk servis edin. Gazlı veya gazsız — tercihinize bağlı!",
+      },
+    },
+  },
+  en: {
+    welcome: "Welcome to Home Bar ☕",
+    subtitle: "Pick a drink from the menu and explore the recipe.",
+    ingredients: "Ingredients",
+    ratios: "Ratios",
+    steps: "Preparation",
+    serving: "Serving",
+    close: "Close",
+    langSwitch: "TR",
+    categories: {
+      espresso: "Espresso Based",
+      cold: "Cold Drinks",
+      traditional: "Traditional",
+      other: "Other",
+    },
+    drinks: {
+      espresso: {
+        name: "Espresso",
+        description: "Pure and intense single shot of coffee.",
+        ingredients: ["1 shot espresso (7g coffee)"],
+        steps: [
+          "Grind 7g of coffee beans finely",
+          "Tamp evenly",
+          "Extract for 25–30 seconds",
+          "Serve in a pre-warmed espresso cup",
+        ],
+        serving: "Serve immediately in a warm espresso cup.",
+      },
+      americano: {
+        name: "Americano",
+        description:
+          "Espresso diluted with hot water for a smooth, lighter taste.",
+        ingredients: ["1 shot espresso", "120–150 ml hot water"],
+        steps: [
+          "Brew a single shot of espresso",
+          "Heat water to 90–95°C",
+          "Pour hot water into the cup",
+          "Add espresso on top",
+        ],
+        serving:
+          "Serve in a large cup. Can be enjoyed black or with a splash of milk.",
+      },
+      latte: {
+        name: "Latte",
+        description: "Espresso with steamed milk and a thin milk foam layer.",
+        ingredients: ["1 shot espresso", "150–180 ml milk", "Thin milk foam"],
+        steps: [
+          "Brew espresso",
+          "Steam milk to 60–65°C",
+          "Pour steamed milk over espresso",
+          "Add a thin layer of foam on top",
+        ],
+        serving: "Serve in a tall glass or large cup.",
+      },
+      cappuccino: {
+        name: "Cappuccino",
+        description: "Equal parts espresso, steamed milk, and thick foam.",
+        ingredients: [
+          "1 shot espresso",
+          "60 ml steamed milk",
+          "60 ml milk foam",
+        ],
+        steps: [
+          "Brew espresso",
+          "Steam milk to create thick, velvety foam",
+          "Pour steamed milk over espresso",
+          "Spoon thick foam on top",
+        ],
+        serving: "Serve in a wide cup. Optionally dust with cocoa powder.",
+      },
+      "flat-white": {
+        name: "Flat White",
+        description: "Double espresso with velvety micro-foam milk.",
+        ingredients: [
+          "2 shots espresso",
+          "130–150 ml steamed milk",
+          "Micro-foam",
+        ],
+        steps: [
+          "Brew a double shot of espresso",
+          "Steam milk to 60°C with very fine micro-foam",
+          "Pour milk over espresso with minimal foam",
+        ],
+        serving: "Serve in a small cup. Stronger than a latte.",
+      },
+      mocha: {
+        name: "Mocha",
+        description:
+          "Espresso with chocolate and steamed milk. A sweet treat.",
+        ingredients: [
+          "1 shot espresso",
+          "1 tbsp chocolate sauce",
+          "150 ml steamed milk",
+          "Whipped cream (optional)",
+        ],
+        steps: [
+          "Add chocolate sauce to the cup",
+          "Brew espresso and pour over chocolate",
+          "Stir to combine",
+          "Add steamed milk",
+          "Top with whipped cream if desired",
+        ],
+        serving: "Serve in a tall glass. Perfect for chocolate lovers.",
+      },
+      macchiato: {
+        name: "Macchiato",
+        description:
+          "Espresso 'stained' with a small amount of milk foam.",
+        ingredients: ["1 shot espresso", "1–2 tbsp milk foam"],
+        steps: [
+          "Brew espresso",
+          "Steam a small amount of milk",
+          "Spoon a dollop of foam on top of espresso",
+        ],
+        serving: "Serve in an espresso cup. Strong and bold.",
+      },
+      cortado: {
+        name: "Cortado",
+        description:
+          "Espresso balanced with an equal amount of warm milk.",
+        ingredients: ["1 shot espresso", "30–60 ml warm milk"],
+        steps: [
+          "Brew espresso",
+          "Steam milk lightly (less foam than a latte)",
+          "Pour equal amount of milk over espresso",
+        ],
+        serving: "Serve in a small glass. Smooth and balanced.",
+      },
+      "iced-latte": {
+        name: "Iced Latte",
+        description: "Chilled espresso with cold milk over ice.",
+        ingredients: ["1–2 shots espresso", "150 ml cold milk", "Ice cubes"],
+        steps: [
+          "Brew espresso and let it cool slightly",
+          "Fill a glass with ice cubes",
+          "Pour cold milk over ice",
+          "Add espresso on top",
+        ],
+        serving:
+          "Serve in a tall glass with a straw. Add syrup if desired.",
+      },
+      "iced-americano": {
+        name: "Iced Americano",
+        description:
+          "Espresso poured over ice and cold water. Crisp and refreshing.",
+        ingredients: [
+          "1–2 shots espresso",
+          "150 ml cold water",
+          "Ice cubes",
+        ],
+        steps: [
+          "Fill a glass with ice cubes",
+          "Pour cold water over ice",
+          "Brew espresso",
+          "Pour espresso over the iced water",
+        ],
+        serving: "Serve in a tall glass. Light and refreshing.",
+      },
+      "iced-mocha": {
+        name: "Iced Mocha",
+        description: "Cold espresso with chocolate and milk over ice.",
+        ingredients: [
+          "1 shot espresso",
+          "1 tbsp chocolate sauce",
+          "150 ml cold milk",
+          "Ice cubes",
+          "Whipped cream (optional)",
+        ],
+        steps: [
+          "Mix chocolate sauce with a small amount of hot espresso",
+          "Fill a glass with ice",
+          "Pour cold milk over ice",
+          "Add the chocolate espresso mix",
+          "Top with whipped cream if desired",
+        ],
+        serving: "Serve in a tall glass. A sweet, cold indulgence.",
+      },
+      "cold-brew": {
+        name: "Cold Brew",
+        description:
+          "Slow-steeped coffee for a smooth, low-acidity flavor.",
+        ingredients: ["30g coarse ground coffee", "500 ml cold water"],
+        steps: [
+          "Coarsely grind coffee beans",
+          "Combine coffee and cold water in a jar",
+          "Stir gently",
+          "Refrigerate for 12–24 hours",
+          "Strain through a filter",
+          "Serve over ice, dilute if desired",
+        ],
+        serving:
+          "Serve over ice. Can be diluted with water or milk to taste.",
+      },
+      "turkish-coffee": {
+        name: "Turkish Coffee",
+        description:
+          "Rich, unfiltered coffee brewed in a cezve. A timeless classic.",
+        ingredients: [
+          "2 tsp finely ground Turkish coffee",
+          "1 cup cold water",
+          "Sugar (optional)",
+        ],
+        steps: [
+          "Add cold water to the cezve",
+          "Add coffee (and sugar if desired)",
+          "Stir and place on low heat",
+          "Heat slowly without stirring",
+          "When foam rises, remove from heat",
+          "Pour into a cup, preserving the foam",
+        ],
+        serving: "Serve with a glass of water and Turkish delight.",
+      },
+      tea: {
+        name: "Tea",
+        description: "Classic black tea, brewed the traditional way.",
+        ingredients: ["2 tsp loose black tea", "Boiling water"],
+        steps: [
+          "Boil fresh water",
+          "Warm the teapot",
+          "Add tea leaves to the pot",
+          "Pour boiling water over leaves",
+          "Steep for 3–5 minutes",
+          "Pour through a strainer",
+        ],
+        serving: "Serve in a tea glass. Add sugar to taste.",
+      },
+      "linden-tea": {
+        name: "Linden Tea",
+        description:
+          "Soothing and aromatic herbal tea. Perfect for relaxation.",
+        ingredients: [
+          "1–2 tsp dried linden flowers",
+          "Boiling water",
+          "Honey (optional)",
+        ],
+        steps: [
+          "Boil fresh water",
+          "Place linden flowers in a cup or teapot",
+          "Pour boiling water over the flowers",
+          "Cover and steep for 5–7 minutes",
+          "Strain and add honey if desired",
+        ],
+        serving: "Serve warm. Great with a spoonful of honey.",
+      },
+      "mineral-water": {
+        name: "Mineral Water",
+        description: "Refreshing sparkling or still mineral water.",
+        ingredients: ["Mineral water"],
+        steps: [
+          "Pour into a glass",
+          "Add ice if desired",
+          "Serve with a lemon slice",
+        ],
+        serving: "Serve chilled. Sparkling or still — your choice!",
+      },
+    },
+  },
+};
