@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
+import { useLanguage } from "../i18n/useLanguage";
 
 const overlayVariants = {
   hidden: { opacity: 0 },
@@ -18,15 +19,17 @@ const modalVariants = {
 };
 
 export default function DrinkModal({ drink, onClose }) {
+  const { lang, t } = useLanguage();
+
   const ratioEntries = drink?.ratios
-    ? Object.entries(drink.ratios).filter(([, v]) => v)
+    ? Object.entries(drink.ratios[lang] ?? {}).filter(([, v]) => v)
     : [];
 
   return (
     <AnimatePresence>
       {drink && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
           variants={overlayVariants}
           initial="hidden"
           animate="visible"
@@ -43,7 +46,7 @@ export default function DrinkModal({ drink, onClose }) {
 
           {/* Modal content */}
           <motion.div
-            className="relative z-10 bg-amber-50 dark:bg-zinc-900 rounded-t-3xl md:rounded-2xl w-full max-w-lg max-h-[85vh] overflow-y-auto shadow-2xl"
+            className="relative z-10 bg-amber-50 dark:bg-zinc-900 rounded-2xl w-full max-w-lg max-h-[85vh] overflow-y-auto shadow-2xl"
             variants={modalVariants}
             initial="hidden"
             animate="visible"
@@ -52,7 +55,7 @@ export default function DrinkModal({ drink, onClose }) {
             {/* Header */}
             <div className="sticky top-0 z-10 flex items-center justify-between px-6 pt-5 pb-3 bg-amber-50 dark:bg-zinc-900 border-b border-amber-200 dark:border-amber-800/30">
               <h2 className="text-xl md:text-2xl font-bold text-amber-900 dark:text-amber-100">
-                {drink.name}
+                {drink.name[lang]}
               </h2>
               <button
                 onClick={onClose}
@@ -66,17 +69,17 @@ export default function DrinkModal({ drink, onClose }) {
             <div className="px-6 py-5 space-y-6">
               {/* Description */}
               <p className="text-amber-800 dark:text-amber-200/80 leading-relaxed">
-                {drink.description}
+                {drink.description[lang]}
               </p>
 
               {/* Ingredients */}
-              {drink.ingredients?.length > 0 && (
+              {drink.ingredients?.[lang]?.length > 0 && (
                 <section>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-2">
-                    Ingredients
+                    {t("ingredients")}
                   </h3>
                   <ul className="space-y-1">
-                    {drink.ingredients.map((item, i) => (
+                    {drink.ingredients[lang].map((item, i) => (
                       <li
                         key={i}
                         className="flex items-start gap-2 text-amber-800 dark:text-amber-200/70"
@@ -93,7 +96,7 @@ export default function DrinkModal({ drink, onClose }) {
               {ratioEntries.length > 0 && (
                 <section>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-2">
-                    Ratios
+                    {t("ratios")}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {ratioEntries.map(([key, value]) => (
@@ -110,13 +113,13 @@ export default function DrinkModal({ drink, onClose }) {
               )}
 
               {/* Preparation steps */}
-              {drink.steps?.length > 0 && (
+              {drink.steps?.[lang]?.length > 0 && (
                 <section>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-2">
-                    Preparation
+                    {t("preparation")}
                   </h3>
                   <ol className="space-y-2">
-                    {drink.steps.map((step, i) => (
+                    {drink.steps[lang].map((step, i) => (
                       <li
                         key={i}
                         className="flex items-start gap-3 text-amber-800 dark:text-amber-200/70"
@@ -132,13 +135,13 @@ export default function DrinkModal({ drink, onClose }) {
               )}
 
               {/* Serving suggestion */}
-              {drink.serving && (
+              {drink.serving?.[lang] && (
                 <section className="bg-amber-100/60 dark:bg-amber-900/20 rounded-xl p-4 border border-amber-200 dark:border-amber-800/30">
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-1">
-                    Serving Suggestion
+                    {t("serving")}
                   </h3>
                   <p className="text-amber-800 dark:text-amber-200/80 text-sm">
-                    {drink.serving}
+                    {drink.serving[lang]}
                   </p>
                 </section>
               )}

@@ -1,16 +1,100 @@
-# React + Vite
+# ☕ Home Menu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**TR** | [EN](#english)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Türkçe
 
-## React Compiler
+Evdeki kahve ve içecek menüsü için hazırlanmış, sade ve şık bir web uygulaması.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Özellikler
 
-## Expanding the ESLint configuration
+- ☕ Espresso bazlı kahveler, soğuk içecekler, geleneksel içecekler ve diğer seçenekler
+- 🌐 Türkçe / İngilizce dil desteği (varsayılan: Türkçe)
+- 📱 Mobil uyumlu, tam ortalanmış modal
+- 🎨 Koyu / Açık tema desteği
+- ⚡ React + Vite + TailwindCSS + Framer Motion
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Kullanılan Teknolojiler
+
+- [React](https://react.dev/)
+- [Vite](https://vite.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+
+### Kurulum
+
+```bash
+npm install
+npm run dev
+```
+
+### Yapı
+
+```
+src/
+├── components/
+│   ├── CategoryTabs.jsx   # Kategori sekmeleri
+│   ├── DrinkCard.jsx      # İçecek kartı
+│   ├── DrinkGrid.jsx      # İçecek ızgarası
+│   ├── DrinkModal.jsx     # İçecek detay modalı
+│   └── WelcomeHeader.jsx  # Başlık ve dil değiştirici
+├── data/
+│   └── drinks.js          # İki dilli içecek verisi
+├── i18n/
+│   ├── LanguageContext.jsx # Dil bağlamı (Context)
+│   └── translations.js    # TR/EN çeviriler
+└── pages/
+    └── MenuPage.jsx        # Ana sayfa
+```
+
+---
+
+## English
+
+<a name="english"></a>
+
+A clean and elegant web application for a home coffee and drinks menu.
+
+### Features
+
+- ☕ Espresso-based coffees, cold drinks, traditional drinks and other options
+- 🌐 Turkish / English language support (default: Turkish)
+- 📱 Mobile-friendly, fully centered modal
+- 🎨 Dark / Light theme support
+- ⚡ React + Vite + TailwindCSS + Framer Motion
+
+### Tech Stack
+
+- [React](https://react.dev/)
+- [Vite](https://vite.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+
+### Setup
+
+```bash
+npm install
+npm run dev
+```
+
+### Structure
+
+```
+src/
+├── components/
+│   ├── CategoryTabs.jsx   # Category tabs
+│   ├── DrinkCard.jsx      # Drink card
+│   ├── DrinkGrid.jsx      # Drink grid
+│   ├── DrinkModal.jsx     # Drink detail modal
+│   └── WelcomeHeader.jsx  # Header & language toggle
+├── data/
+│   └── drinks.js          # Bilingual drink data
+├── i18n/
+│   ├── LanguageContext.jsx # Language context
+│   └── translations.js    # TR/EN translations
+└── pages/
+    └── MenuPage.jsx        # Main page
+```
+

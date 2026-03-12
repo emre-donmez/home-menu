@@ -6,20 +6,22 @@ import {
   FaWater,
   FaLeaf,
 } from "react-icons/fa";
+import { useLanguage } from "../i18n/useLanguage";
 
 const iconMap = {
   espresso: FaCoffee,
   americano: FaCoffee,
-  latte: FaMugHot,
+  "caffe-latte": FaMugHot,
+  "latte-macchiato": FaMugHot,
   cappuccino: FaMugHot,
   "flat-white": FaMugHot,
   mocha: FaMugHot,
   macchiato: FaCoffee,
   cortado: FaCoffee,
+  affogato: FaMugHot,
   "iced-latte": FaGlassWhiskey,
   "iced-americano": FaGlassWhiskey,
   "iced-mocha": FaGlassWhiskey,
-  "cold-brew": FaGlassWhiskey,
   "turkish-coffee": FaCoffee,
   tea: FaLeaf,
   "linden-tea": FaLeaf,
@@ -36,6 +38,7 @@ const cardVariants = {
 };
 
 export default function DrinkCard({ drink, index, onClick }) {
+  const { lang } = useLanguage();
   const Icon = iconMap[drink.id] || FaCoffee;
 
   return (
@@ -53,10 +56,10 @@ export default function DrinkCard({ drink, index, onClick }) {
         <Icon />
       </span>
       <span className="font-semibold text-amber-900 dark:text-amber-100 text-base md:text-lg text-center">
-        {drink.name}
+        {drink.name[lang]}
       </span>
       <span className="text-sm text-amber-700/70 dark:text-amber-300/60 text-center leading-snug">
-        {drink.description}
+        {drink.description[lang]}
       </span>
     </motion.button>
   );

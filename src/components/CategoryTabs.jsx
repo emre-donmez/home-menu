@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { categories } from "../data/drinks";
+import { useLanguage } from "../i18n/useLanguage";
 
 export default function CategoryTabs({ active, onChange }) {
+  const { t } = useLanguage();
+
   return (
     <nav className="flex flex-wrap justify-center gap-2 px-4 py-4">
       {categories.map((cat) => (
@@ -24,7 +27,7 @@ export default function CategoryTabs({ active, onChange }) {
             />
           )}
           <span className="relative z-10">
-            {cat.icon} {cat.name}
+            {cat.icon} {t(`categories.${cat.id}`)}
           </span>
         </motion.button>
       ))}
