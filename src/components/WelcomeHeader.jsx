@@ -28,7 +28,7 @@ export default function WelcomeHeader() {
         animate={{ scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        {t("welcome")} ☕
+        {t("welcome")}
       </motion.h1>
       <motion.p
         className="mt-3 text-lg md:text-xl text-amber-700 dark:text-amber-300/80 max-w-md mx-auto"
