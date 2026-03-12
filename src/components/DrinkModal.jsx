@@ -72,26 +72,6 @@ export default function DrinkModal({ drink, onClose }) {
                 {drink.description[lang]}
               </p>
 
-              {/* Ingredients */}
-              {drink.ingredients?.[lang]?.length > 0 && (
-                <section>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400 mb-2">
-                    {t("ingredients")}
-                  </h3>
-                  <ul className="space-y-1">
-                    {drink.ingredients[lang].map((item, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-amber-800 dark:text-amber-200/70"
-                      >
-                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-amber-500 dark:bg-amber-400 shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-
               {/* Ratios */}
               {ratioEntries.length > 0 && (
                 <section>

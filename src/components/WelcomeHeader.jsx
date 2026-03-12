@@ -9,16 +9,18 @@ export default function WelcomeHeader() {
       initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="pt-10 pb-6 px-4 text-center relative"
+      className="pt-6 pb-6 px-4 text-center"
     >
-      <motion.button
-        onClick={toggleLang}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="absolute top-10 right-4 px-3 py-1 rounded-full text-sm font-semibold bg-amber-700 dark:bg-amber-600 text-white shadow cursor-pointer"
-      >
-        {t("languageLabel")}
-      </motion.button>
+      <div className="flex justify-end mb-4">
+        <motion.button
+          onClick={toggleLang}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-3 py-1 rounded-full text-sm font-semibold bg-amber-700 dark:bg-amber-600 text-white shadow cursor-pointer"
+        >
+          {t("languageLabel")}
+        </motion.button>
+      </div>
 
       <motion.h1
         className="text-4xl md:text-5xl font-bold text-amber-900 dark:text-amber-100"
