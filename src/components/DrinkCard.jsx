@@ -58,9 +58,6 @@ export default function DrinkCard({ drink, index, onClick }) {
       <span className="font-semibold text-amber-900 dark:text-amber-100 text-base md:text-lg text-center">
         {drink.name[lang]}
       </span>
-      <span className="text-sm text-amber-700/70 dark:text-amber-300/60 text-center leading-snug">
-        {drink.description[lang]}
-      </span>
     </motion.button>
   );
 }
