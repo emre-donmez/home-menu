@@ -9,11 +9,11 @@ export const drinks = [
   // Espresso Based
   {
     id: "espresso",
-    name: { tr: "Espresso (Single / Double)", en: "Espresso (Single / Double)" },
+    name: { tr: "Espresso", en: "Espresso" },
     category: "espresso",
     description: {
-      tr: "Tüm içeceklerin kalbidir. 30 ml (single) veya 60 ml (double) olarak fincana doğrudan alınır.",
-      en: "The heart of all drinks. Served directly in a cup as 30 ml (single) or 60 ml (double).",
+      tr: "Her kahvenin temelidir; küçük ama güçlü.",
+      en: "The foundation of every coffee; small but powerful.",
     },
     ingredients: {
       tr: ["7–9 gr veya 15–18 gr Kahve", "Basınçlı Su"],
@@ -34,8 +34,8 @@ export const drinks = [
     name: { tr: "Americano", en: "Americano" },
     category: "espresso",
     description: {
-      tr: "Espressonun üzerine sıcak su eklenerek hazırlanan klasik bir kahve.",
-      en: "A classic coffee prepared by adding hot water over espresso.",
+      tr: "Espressonun sıcak suyla buluşmasıyla ortaya çıkan dengeli ve içimi kolay bir kahve.",
+      en: "A balanced and easy-drinking coffee where espresso meets hot water.",
     },
     ingredients: {
       tr: ["Double Espresso", "90–120 ml Sıcak Su"],
@@ -56,8 +56,8 @@ export const drinks = [
     name: { tr: "Macchiato", en: "Macchiato" },
     category: "espresso",
     description: {
-      tr: "Espresso fincana alınır; üstüne yoğun süt köpüğünden bir kaşık bırakılır.",
-      en: "Espresso served in a cup with a spoonful of thick milk foam on top.",
+      tr: "Güçlü espressonun üstüne sadece bir kaşık süt köpüğü bırakılarak hazırlanan küçük ama karakterli bir içecek.",
+      en: "A small but characterful drink where just a spoonful of milk foam is placed on top of a strong espresso.",
     },
     ingredients: {
       tr: ["Double Espresso", "1–2 tatlı kaşığı Süt Köpüğü"],
@@ -78,8 +78,8 @@ export const drinks = [
     name: { tr: "Cortado", en: "Cortado" },
     category: "espresso",
     description: {
-      tr: "Eşit miktarda espresso ve hafif köpürtülmüş süt. Asiditeyi kıran dengeli bir kahve.",
-      en: "Equal parts espresso and lightly frothed milk. A balanced coffee that cuts acidity.",
+      tr: "Espresso ile sütün eşit oranda buluştuğu dengeli ve yumuşak bir içecek.",
+      en: "A balanced and smooth drink where espresso and milk meet in equal parts.",
     },
     ingredients: {
       tr: ["Double Espresso", "60 ml Ilık/Mikroköpüklü Süt"],
@@ -100,8 +100,8 @@ export const drinks = [
     name: { tr: "Flat White", en: "Flat White" },
     category: "espresso",
     description: {
-      tr: "Double espresso üzerine pürüzsüz mikroköpüklü süt dökülerek hazırlanır.",
-      en: "Double espresso topped with smooth, velvety micro-foam milk.",
+      tr: "Double espresso üzerine pürüzsüz mikroköpüklü sütün dökülmesiyle oluşan yoğun ve kadifemsi bir içecek.",
+      en: "An intense and velvety drink formed by pouring smooth micro-foam milk over a double espresso.",
     },
     ingredients: {
       tr: ["Double Espresso", "120 ml Mikroköpüklü Süt"],
@@ -122,8 +122,8 @@ export const drinks = [
     name: { tr: "Cappuccino", en: "Cappuccino" },
     category: "espresso",
     description: {
-      tr: "1/3 kahve, 1/3 süt, 1/3 köpük kuralıyla hazırlanan klasik İtalyan kahvesi.",
-      en: "Classic Italian coffee prepared with the 1/3 coffee, 1/3 milk, 1/3 foam rule.",
+      tr: "Eşit oranlarda espresso, süt ve köpük. İtalya'nın kahveden dünyaya armağan ettiği klasik denge.",
+      en: "Equal parts espresso, milk and foam. The classic balance Italy gifted to the world through coffee.",
     },
     ingredients: {
       tr: ["Single veya Double Espresso", "Sıcak Süt", "Kalın Süt Köpüğü"],
@@ -144,8 +144,8 @@ export const drinks = [
     name: { tr: "Caffe Latte", en: "Caffe Latte" },
     category: "espresso",
     description: {
-      tr: "Espresso ve bol sıcak süt. Üstünde ince bir köpük tabakası bulunur.",
-      en: "Espresso with plenty of hot milk and a thin foam layer on top.",
+      tr: "Günün her saatine uyan, sütün espressoyu yumuşattığı hafif ve içimi kolay bir kahve.",
+      en: "A light, easy-drinking coffee for any time of day, where milk softens the espresso.",
     },
     ingredients: {
       tr: ["Single veya Double Espresso", "Bol Sıcak Süt", "İnce Süt Köpüğü"],
@@ -166,21 +166,21 @@ export const drinks = [
     name: { tr: "Latte Macchiato", en: "Latte Macchiato" },
     category: "espresso",
     description: {
-      tr: "Önce süt ve köpük, ardından espresso eklenerek 3 katmanlı görünüm elde edilir.",
-      en: "Milk and foam first, then espresso is added to create a 3-layer appearance.",
+      tr: "Uzun bardakta buharda ısıtılmış süt ve köpük üzerine espresso akıtılarak hazırlanan, güzel katmanlı görünümüyle dikkat çeken bir içecek.",
+      en: "A visually captivating drink prepared in a tall glass by slowly pouring espresso over steamed milk and foam, creating beautiful layers.",
     },
     ingredients: {
       tr: ["Bol Sıcak Süt", "Kalın Süt Köpüğü", "Single veya Double Espresso"],
       en: ["Plenty of Hot Milk", "Thick Milk Foam", "Single or Double Espresso"],
     },
     steps: {
-      tr: ["Sıcak Süt", "Kalın Süt Köpüğü", "Espresso"],
-      en: ["Hot Milk", "Thick Milk Foam", "Espresso"],
+      tr: ["Sütü buharda ısıt ve uzun bardağa dök", "Üzerine kalın bir süt köpüğü tabakası ekle", "Espressoyu köpüğün ortasından yavaşça akıt"],
+      en: ["Steam the milk and pour into a tall glass", "Add a thick layer of milk foam on top", "Slowly pour espresso through the center of the foam"],
     },
-    ratios: { tr: { süt: "150–180 ml", espresso: "30–60 ml" }, en: { milk: "150–180 ml", espresso: "30–60 ml" } },
+    ratios: { tr: { süt: "150 ml", espresso: "30–60 ml" }, en: { milk: "150 ml", espresso: "30–60 ml" } },
     serving: {
-      tr: "Sıralama tam tersidir. Önce bardağa süt ve köpük dökülür. Bardağın ortasında bir delik açılarak espresso yavaşça sütün içine akıtılır. Bardakta 3 ayrı renk katmanı oluşur.",
-      en: "The order is reversed. Milk and foam are poured into the glass first. A hole is made in the center and espresso is slowly poured into the milk. Three distinct color layers form in the glass.",
+      tr: "Karıştırmadan iç. Bardakta 3 farklı renk katmanı oluşur: altta süt, ortada kahve, üstte köpük.",
+      en: "Drink without stirring. Three distinct color layers form in the glass: milk at the bottom, coffee in the middle, foam on top.",
     },
   },
   {
@@ -188,8 +188,8 @@ export const drinks = [
     name: { tr: "Mocha", en: "Mocha" },
     category: "espresso",
     description: {
-      tr: "Çikolata sosu, espresso ve sıcak süt birleşimi. Kremşanti ile servis edilebilir.",
-      en: "A combination of chocolate sauce, espresso and hot milk. Can be served with whipped cream.",
+      tr: "Çikolata ve kahvenin mükemmel uyumu. Tatlı ve yoğun ama dengeli bir içecek.",
+      en: "The perfect harmony of chocolate and coffee. Sweet and intense, yet beautifully balanced.",
     },
     ingredients: {
       tr: ["Çikolata Sosu/Tozu", "Espresso", "Sıcak Süt", "İsteğe bağlı Kremşanti"],
@@ -210,8 +210,8 @@ export const drinks = [
     name: { tr: "Affogato", en: "Affogato" },
     category: "espresso",
     description: {
-      tr: "Hem tatlı hem kahve. Vanilyalı dondurmanın üzerine sıcak espresso dökülerek servis edilir.",
-      en: "Both dessert and coffee. Served by pouring hot espresso over vanilla ice cream.",
+      tr: "Sıcak espressonun vanilyalı dondurmayla buluştuğu tatlı-kahveli eşsiz bir lezzet.",
+      en: "A unique sweet-coffee treat where hot espresso meets vanilla ice cream.",
     },
     ingredients: {
       tr: ["Vanilyalı Dondurma", "Double Espresso"],
@@ -234,8 +234,8 @@ export const drinks = [
     name: { tr: "Iced Americano", en: "Iced Americano" },
     category: "cold",
     description: {
-      tr: "Buz ve soğuk su üzerine double espresso akıtılarak hazırlanan ferahlatıcı soğuk kahve.",
-      en: "A refreshing cold coffee prepared by pouring double espresso over ice and cold water.",
+      tr: "Sıcak günlerin vazgeçilmezi. Buz ve soğuk suyla serinleyen double espresso.",
+      en: "The staple of hot days. Double espresso refreshed with ice and cold water.",
     },
     ingredients: {
       tr: ["Bol Buz", "100 ml Soğuk Su", "Double Espresso"],
@@ -256,8 +256,8 @@ export const drinks = [
     name: { tr: "Iced Latte", en: "Iced Latte" },
     category: "cold",
     description: {
-      tr: "Buz ve soğuk süt üzerine double espresso dökülerek hazırlanan klasik soğuk latte.",
-      en: "Classic cold latte prepared by pouring double espresso over ice and cold milk.",
+      tr: "Soğuk sütün espressoya kavuştuğu, her yudumda ferahlatan yumuşak bir içecek.",
+      en: "A smooth and refreshing drink where cold milk meets espresso, delightful with every sip.",
     },
     ingredients: {
       tr: ["Bol Buz", "150 ml Soğuk Süt", "Double Espresso"],
@@ -278,8 +278,8 @@ export const drinks = [
     name: { tr: "Iced Mocha", en: "Iced Mocha" },
     category: "cold",
     description: {
-      tr: "Çikolata, espresso, soğuk süt ve buz katmanlarından oluşan yoğun soğuk kahve.",
-      en: "An intense cold coffee made of chocolate, espresso, cold milk and ice layers.",
+      tr: "Çikolata, espresso ve soğuk süt. Sıcak günler için hem yoğun hem ferahlatıcı bir tercih.",
+      en: "Chocolate, espresso and cold milk. An intense yet refreshing choice for hot days.",
     },
     ingredients: {
       tr: ["1.5 YK Damla/Kare Çikolata", "Double Espresso", "Soğuk Süt", "Buz"],
@@ -302,8 +302,8 @@ export const drinks = [
     name: { tr: "Türk Kahvesi", en: "Turkish Coffee" },
     category: "traditional",
     description: {
-      tr: "Cezve'de pişirilen köpüklü, yoğun ve vazgeçilmez bir klasik.",
-      en: "A foamy, intense and indispensable classic brewed in a cezve.",
+      tr: "Cezve'de yavaşça pişirilen, köpüklü, yoğun ve her yudumda hikâye barındıran vazgeçilmez bir klasik.",
+      en: "An indispensable classic slowly brewed in a cezve, foamy, intense and full of story with every sip.",
     },
     ingredients: {
       tr: ["2 tatlı kaşığı ince çekilmiş Türk kahvesi", "1 fincan soğuk su", "Şeker (isteğe bağlı)"],
@@ -410,21 +410,13 @@ export const drinks = [
     name: { tr: "Maden Suyu", en: "Mineral Water" },
     category: "other",
     description: {
-      tr: "Ferahlatıcı köpüklü veya köpüksüz maden suyu.",
-      en: "Refreshing sparkling or still mineral water.",
+      tr: "Beypazarı / Kızılay",
+      en: "Beypazarı / Kızılay",
     },
     ingredients: {
       tr: ["Maden suyu"],
       en: ["Mineral water"],
     },
-    steps: {
-      tr: ["Bardağa dök", "İstersen buz ekle", "Limon dilimiyle servis et"],
-      en: ["Pour into a glass", "Add ice if desired", "Serve with a lemon slice"],
-    },
     ratios: { tr: {}, en: {} },
-    serving: {
-      tr: "Soğuk servis et. Köpüklü veya köpüksüz — senin seçimin!",
-      en: "Serve chilled. Sparkling or still — your choice!",
-    },
   },
 ];
