@@ -18,9 +18,7 @@ const modalVariants = {
 };
 
 export default function DrinkModal({ drink, onClose }) {
-  if (!drink) return null;
-
-  const ratioEntries = drink.ratios
+  const ratioEntries = drink?.ratios
     ? Object.entries(drink.ratios).filter(([, v]) => v)
     : [];
 
