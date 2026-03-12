@@ -18,6 +18,9 @@ export const translations = {
     preparation: "Hazırlanışı",
     serving: "Servis Önerisi",
 
+    // Card details button
+    viewDetails: "Detayları Gör",
+
     // Language toggle
     languageLabel: "EN",
   },
@@ -39,6 +42,9 @@ export const translations = {
     ratios: "Ratios",
     preparation: "Preparation",
     serving: "Serving Suggestion",
+
+    // Card details button
+    viewDetails: "View Details",
 
     // Language toggle
     languageLabel: "TR",
