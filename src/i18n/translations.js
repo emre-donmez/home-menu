@@ -2,7 +2,7 @@ export const translations = {
   tr: {
     // Header
     welcome: "Evime Hoş Geldiniz",
-    subtitle: "Menüden bir içecek seçebilirsiniz.",
+    subtitle: "Menüden içecek seçebilirsiniz.",
 
     // Category names
     categories: {
